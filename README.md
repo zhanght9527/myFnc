@@ -8,7 +8,7 @@ _函数的语法使用的是es6_
 
 ### 引入myFnc.js
 
-#### 1.trim
+### 1.trim
 
     myFnc.trim (str, type)
 
@@ -18,7 +18,7 @@ param **{String}** str-待处理的字符串
 
 param **{Int}** type-去除空格的形式（1-所有空格  2-前后空格  3-前空格 4-后空格，不传返回原字符串)
 
-#### 2.repeatStr
+### 2.repeatStr
 
     myFnc.repeatStr (str, count)
 
@@ -28,7 +28,7 @@ param **{String}** str-待复制的字符串
 
 param **{Int}** type-复制的次数
 
-#### 3.checkType
+### 3.checkType
 
     myFnc.checkType (str, type)
 
@@ -38,7 +38,7 @@ param **{String}** str-待检测的字符串
 
 param **{Int}** type-检测类型（email、phone、tel、number、English、text、Chinese、lower、upper）
 
-#### 4.checkPwd
+### 4.checkPwd
 
     myFnc.checkPwd (str)
 
@@ -48,7 +48,7 @@ param **{String}** str-待检测的密码字符串
 
 密码长度小于6为0，大写+1，小写+1，数字+1
 
-#### 5.randomWord
+### 5.randomWord
 
     myFnc.randomWord (count)
 
@@ -56,7 +56,7 @@ param **{String}** str-待检测的密码字符串
 
 param **{Int}** count-取值范围2-36
 
-##### demo
+#### demo
 
     myFnc.randomWord(10)
     result："2584316588472575"
@@ -67,7 +67,7 @@ param **{Int}** count-取值范围2-36
     myFnc.randomWord(36)
     result："83vhdx10rmjkyb9"
 
-#### 6.formatText
+### 6.formatText
 
     myFnc.formatText(str, size, delimiter)
 
@@ -79,7 +79,7 @@ param **{Int}** size-间隔,默认3
 
 param **{String}** delimiter-间隔符，默认','
 
-##### demo
+#### demo
 
     myFnc.formatText('1234asda567asd890')
     result："12,34a,sda,567,asd,890"
@@ -90,7 +90,7 @@ param **{String}** delimiter-间隔符，默认','
     myFnc.formatText('1234asda567asd890',4,'-')
     result："1-234a-sda5-67as-d890"
 
-#### 7.longestWord
+### 7.longestWord
 
     myFnc.longestWord(str, splitType)
 
@@ -100,7 +100,7 @@ param **{String}** str-字符串
 
 param **{splitType}** size-间隔符，默认' '
 
-#### 8.removeRepeatArray
+### 8.removeRepeatArray
 
 	myFnc.removeRepeatArray (arr)
 
@@ -108,7 +108,7 @@ param **{splitType}** size-间隔符，默认' '
 
 param **{Array}** arr-待去重数组
 
-#### 9.upsetArr
+### 9.upsetArr
 
 	myFnc.upsetArr (arr)
 
@@ -116,7 +116,7 @@ param **{Array}** arr-待去重数组
 
 param **{Array}** arr-待打乱数组
 
-#### 10.maxArr
+### 10.maxArr
 
 	myFnc.maxArr (arr)
 
@@ -124,7 +124,7 @@ param **{Array}** arr-待打乱数组
 
 param **{Array}** arr-待处理数组
 
-#### 11.minArr
+### 11.minArr
 
 	myFnc.minArr (arr)
 
@@ -132,7 +132,7 @@ param **{Array}** arr-待处理数组
 
 param **{Array}** arr-待处理数组
 
-#### 12.sumArr
+### 12.sumArr
 
 	myFnc.sumArr (arr)
 
@@ -140,7 +140,7 @@ param **{Array}** arr-待处理数组
 
 param **{Array}** arr-待处理数组
 
-#### 13.covArr
+### 13.covArr
 
 	myFnc.covArr (arr)
 
@@ -148,7 +148,7 @@ param **{Array}** arr-待处理数组
 
 param **{Array}** arr-待处理数组
 
-#### 14.randomOne
+### 14.randomOne
 
 	myFnc.randomOne (arr)
 
@@ -156,7 +156,7 @@ param **{Array}** arr-待处理数组
 
 param **{Array}** arr-待处理数组
 
-#### 15.getOptionArray
+### 15.getOptionArray
 
 	getOptionArray (arr, keys)
 
@@ -166,7 +166,7 @@ param **{Array}** arr-待处理数组
 
 param **{Sting}** keys-要获取的值的属性，多个属性用','分割
 
-##### demo
+#### demo
     var arr=[{a:1,b:2,c:9},{a:2,b:3,c:5},{a:5,b:9},{a:4,b:2,c:5},{a:4,b:5,c:7}]
 
     myFnc.getOptionArray(arr,'a')
@@ -175,7 +175,7 @@ param **{Sting}** keys-要获取的值的属性，多个属性用','分割
     myFnc.getOptionArray(arr,'a,c')
     result：[{a: 1, c: 9},{a: 2, c: 5},{a: 5, c: undefined},{a: 4, c: 5},{a: 4, c: 7}]
 
-#### 16.filterOptionArray
+### 16.filterOptionArray
 
     myFnc.filterOptionArray(arr, keys)
 
@@ -185,7 +185,7 @@ param **{Array}** arr-待处理数组
 
 param **{Sting}** keys-要过滤的值的属性，多个属性用','分割
 
-##### demo
+#### demo
 
     var arr=[{a:1,b:2,c:9},{a:2,b:3,c:5},{a:5,b:9},{a:4,b:2,c:5},{a:4,b:5,c:7}]
 
@@ -195,7 +195,7 @@ param **{Sting}** keys-要过滤的值的属性，多个属性用','分割
     myFnc.filterOptionArray(arr,'a,c')
     result：[{b: 2},{b: 3},{b: 9},{b: 2},{b: 5}]
 
-#### 17.setFontSize
+### 17.setFontSize
 
 	myFnc.setFontSize (_client)
 
@@ -203,7 +203,7 @@ param **{Sting}** keys-要过滤的值的属性，多个属性用','分割
 
 param **{Ine}** _client-效果图宽度，默认750
 
-#### 18.getEndTime
+### 18.getEndTime
 
 	myFnc.getEndTime (endTime)
 
@@ -211,7 +211,7 @@ param **{Ine}** _client-效果图宽度，默认750
 
 param **{String}** endTime-结束时间(需要正确的时间格式)
 
-##### demo
+#### demo
 
     myFnc.getEndTime('2017/11/22 16:0:0')
     //目前时间是2017.11.6  17.14.55
@@ -222,7 +222,7 @@ param **{String}** endTime-结束时间(需要正确的时间格式)
         s:43
     }
 
-#### 19.randomNumber
+### 19.randomNumber
 
 	myFnc.randomNumber (n1, n2)
 
@@ -234,7 +234,7 @@ param **{Int}** n2-最大值
 
 如果只传入一个参数，则返回0到这个参数的随机数，如果没有传参，则返回0-255的随机数
 
-#### 20.setUrlPrmt
+### 20.setUrlPrmt
 
 	myFnc.setUrlPrmt (obj)
 
@@ -242,12 +242,12 @@ param **{Int}** n2-最大值
 
 param **{Object}** obj-需要设置的参数
 
-##### demo
+#### demo
 
     myFnc.setUrlPrmt({'a':1,'b':2})
     result：a=1&b=2
 
-#### 21.getUrlPrmt
+### 21.getUrlPrmt
 
 	myFnc.getUrlPrmt (url)
 
@@ -255,12 +255,12 @@ param **{Object}** obj-需要设置的参数
 
 param **{String}** url-超链接,如果没有则获取当前的url
 
-##### demo
+#### demo
 
     myFnc.getUrlPrmt('github.com?draftId=122000011938')
     result：{draftId: "122000011938"}
 
-#### 22.filterParams
+### 22.filterParams
 
 	filterParams (obj)
 
@@ -268,12 +268,12 @@ param **{String}** url-超链接,如果没有则获取当前的url
 
 param **{Object}** obj-待操作的对象
 
-##### demo
+#### demo
 
     myFnc.filterParams({a:"",b:null,c:"010",d:123})
     result：{c: "010", d: 123}
 
-#### 23.checkBrowser
+### 23.checkBrowser
 
 	checkBrowser (type)
 
@@ -281,7 +281,7 @@ param **{Object}** obj-待操作的对象
 
 param **{String}** type-手机类型（android、iphone、ipad、weixin）
 
-#### 24.delayFn
+### 24.delayFn
 
     myFnc.delayFn(fn, delay, mustDelay)
 
@@ -293,7 +293,7 @@ param **{Number}** delay-间隔时间
 
 param **{Number}** mustDelay-最大间隔时间
 
-##### demo
+#### demo
 
      var count=0;
      function fn1(){
@@ -303,7 +303,7 @@ param **{Number}** mustDelay-最大间隔时间
      //每100ms连续触发的调用，后一个调用会把前一个调用的等待处理掉，但每隔200ms至少执行一次
      document.onmousemove=myFnc.delayFn(fn1,100,200)
 	
-#### 25.setCookie
+### 25.setCookie
 
     myFnc.setCookie(name, value, iDay)
 
@@ -331,7 +331,7 @@ param **{String}** name-cookie名
 
 param **{String}** name-cookie名
 
-#### 28.hasClass
+### 28.hasClass
 
     myFnc.hasClass(obj, classStr)
 
@@ -341,12 +341,12 @@ param **{Object}** obj-Dom对象
 
 param **{String}** classStr-class名
 
-##### demo
+#### demo
 
     myFnc.classStr(obj,'test')
     result:true|false
 
-#### 29.addClass
+### 29.addClass
 
     myFnc.addClass(obj, classStr)
 
@@ -356,11 +356,11 @@ param **{Object}** obj-Dom对象
 
 param **{String}** classStr-class名
 
-##### demo
+#### demo
 
     myFnc.addClass(obj,'test')
 
-#### 30.removeClass
+### 30.removeClass
 
     myFnc.removeClass(obj, classStr)
 
@@ -370,11 +370,11 @@ param **{Object}** obj-Dom对象
 
 param **{String}** classStr-class名
 
-##### demo
+#### demo
 
     myFnc.removeClass(obj,'test')
 
-#### 31.replaceClass
+### 31.replaceClass
 
     myFnc.replaceClass(obj, newName, oldName)
 
@@ -386,11 +386,11 @@ param **{String}** newName-被替换的类名
 
 param **{String}** oldName-替换的类名
 
-##### demo
+#### demo
 
     myFnc.replaceClass(obj,'test','afterClass')
 
-#### 32.siblings
+### 32.siblings
 
     myFnc.siblings(obj, opt)
 
@@ -400,12 +400,12 @@ param **{Object}** obj-Dom对象
 
 param **{String}** opt-过滤条件
 
-##### demo
+#### demo
 
     myFnc.siblings(obj,'#id')
     result：符合条件的Dom对象
 
-#### 33.show
+### 33.show
 
     myFnc.show(obj)
 
@@ -413,7 +413,7 @@ param **{String}** opt-过滤条件
 
 param **{Object}** obj-Dom对象
 
-#### 34.hide
+### 34.hide
 
     myFnc.hide(obj)
 
@@ -421,7 +421,7 @@ param **{Object}** obj-Dom对象
 
 param **{Object}** obj-Dom对象
 
-#### 35.prefixStyle
+### 35.prefixStyle
 
 	prefixStyle (style)
 
@@ -429,14 +429,14 @@ param **{Object}** obj-Dom对象
 
 param **{String}** style-需要转换的css样式名称
 
-##### demo
+#### demo
 
 	const transform = myFnc.prefixStyle('transform')
 	this.$refs.lyricList.$el.style[transform] = xxx
 
 	result: this.$refs.lyricList.$el.style.webkitTransfrom = xxx
 
-#### 36.ajax
+### 36.ajax
 
     myFnc.ajax(obj)
 
@@ -451,7 +451,7 @@ param **{Object}** 对象参数
  * @param {function}obj.success ajax发送并接收成功调用的回调函数
  * @param {function}obj.error ajax发送失败或者接收失败调用的回调函数
 
-##### demo
+#### demo
 
     myFnc.ajax({
       	type:'get',
