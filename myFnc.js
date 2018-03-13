@@ -150,15 +150,6 @@ let myFnc = {
   randomOne (arr) {
     return arr[Math.floor(Math.random() * arr.length)]
   },
-  // 筛选数组
-  // 删除值为'val'的数组元素
-  // removeArrayForValue(['test','test1','test2','test','aaa'],'test','%')
-  // result：["aaa"]   带有'test'的都删除
-  // removeArrayForValue(['test','test1','test2','test','aaa'],'test')
-  // result：["test1", "test2", "aaa"]  // 数组元素的值全等于'test'才被删除
-  removeArrayForValue (arr, val, type) {
-    return arr.filter(item => type ? item.indexOf(val) === -1 : item !== val)
-  },
   // 获取对象数组某些项
   // let arr=[{a:1,b:2,c:9},{a:2,b:3,c:5},{a:5,b:9},{a:4,b:2,c:5},{a:4,b:5,c:7}]
   // getOptionArray(arr,'a,c')
@@ -211,7 +202,7 @@ let myFnc = {
     return newArr
   },
   // 适配rem
-  setFontSize (_client) {
+  setFontSize (_client = 750) {
     let doc = document
     let win = window
     let docEl = doc.documentElement
@@ -310,7 +301,7 @@ let myFnc = {
     return _newPar
   },
   // 手机类型判断
-  browserInfo (type) {
+  checkBrowser (type) {
     switch (type) {
       case 'android':
         return navigator.userAgent.toLowerCase().indexOf('android') !== -1
@@ -456,28 +447,6 @@ let myFnc = {
       return b
     }
     return a
-  },
-  // 设置样式
-  css (obj, json) {
-    for (let attr in json) {
-      obj.style[attr] = json[attr]
-    }
-  },
-  // 设置HTML内容
-  html (obj) {
-    if (arguments.length === 1) {
-      return obj.innerHTML
-    } else if (arguments.length === 2) {
-      obj.innerHTML = arguments[1]
-    }
-  },
-  // 设置HTML内容
-  text (obj) {
-    if (arguments.length === 1) {
-      return obj.innerHTML
-    } else if (arguments.length === 2) {
-      obj.innerHTML = this.filterStr(arguments[1], 'html')
-    }
   },
   // 显示隐藏
   show (obj) {
